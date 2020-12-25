@@ -9,7 +9,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Abyss</a>
+        <a class="navbar-brand" href="#intro-section">Abyss Maker</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -17,57 +17,35 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="http://www.facebook.com/AbyssMaker" target="_blank">Our Facebook Page</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
+                Features
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="displayCurrency.html">Currency Code</a>
+                <a class="dropdown-item" href="filterResults.html">Filter Results</a>
+                <a class="dropdown-item" href="historicalRates.html">Historical Rate</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
+                <a class="dropdown-item" href="#contactus">Contact Us</a>
               </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        </div>
     </nav>
 
-    <div>
-        <h1>Abyss</h1>
-            <p id="intro">Welcome to Abyss, a real-time currency exchange rate checker to provide you with fast and accurate results.</p>
+    <div id="intro-section">
+        <h1>Abyss Maker</h1>
+            <p id="intro">Welcome to Abyss Maker, a real-time currency exchange rate checker to provide you with fast and accurate results.</p>
+        <h3>Latest Currency Rate Table</h3>
+          <p>Here, you can see the latest currency rates displayed in a table.</p>
     </div>
 
-    <select name="type" id="type"></select>
-    <br>
-    <button id="getData">Get Data</button>
-    <button id="selectRate">Submit</button>
-    <!-- <button id="display-table">Display Table</button> -->
     <button id="display-rate">Display Rate</button>
+
     <div id="output"></div>
-    
-    <!-- <table id="symbols-table" class="table table-stiped">
-      <tr>
-        <th>Currency</th>
-        <th>Rate</th>
-      </tr>
-
-      <tbody id="symbols-result">
-
-
-      </tbody>
-    </table> -->
     
     <div class="table-responsive">
       <table id="rate-table" class="table table-striped table-bordered">
@@ -80,6 +58,23 @@
   
         </tbody>
       </table>
+    </div>
+
+    <br>
+    <br>
+
+    <!-- contact me section -->
+    <div class="container-fluid border border-primary">
+      <footer id="contactus">
+        <h2>Contact Us</h2>
+            <p class="opensans">Email: AbyssMaker@gmail.com
+                <br>Contact Number: 98117456
+                <br>Youtube: www.youtube.com/AbyssMaker
+                <br>Facebook: www.facebook.com/AbyssMaker
+                <br>Instagram: www.instagram.com/AbyssMaker
+                <br>Twitter: www.twitter.com/AbyssMaker
+            </p>
+      </footer>
     </div>
   
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
