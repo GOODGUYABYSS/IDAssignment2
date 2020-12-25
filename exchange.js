@@ -12,34 +12,12 @@ $(document).ready(function(){
     })
 })
 
-$('#getData').on("click", getData)
-$('#selectRate').on("click", testing)
+$('#selectRate').on("click", filterResults)
 $('#display-table').one("click", displayTable)
 $('#display-rate').one("click", displayRate)
+$('#historical-rate').on("click", historicalRate)
 
-fetch(main_url)
-    .then((res) => res.json())
-    .then(function (data) {
-        const rates = data.rates;
-        Object.entries(rates).forEach(([key, value]) => {
-            console.log(key, value);
-         });
-        
-        //  keys for the dropdown menu
-        var selectBox, option, prop;
-
-        selectBox = document.getElementById("type");
-         
-        for (prop in rates) {
-            option = document.createElement("option");
-            option.textContent = prop;
-            option.value = rates[prop];
-            selectBox.add(option);
-        }
-
-    })
-
-function getData(){
+function optionBox(){
     fetch(main_url)
     .then((res) => res.json())
     .then(function (data) {
@@ -59,12 +37,11 @@ function getData(){
             option.value = rates[prop];
             selectBox.add(option);
         }
-
     })
 }
 
 
-function testing(){
+function filterResults(){
     fetch(filter_url+myselectedRate)
     .then((res) => res.json())
     .then(function (data) {
@@ -77,9 +54,15 @@ function testing(){
             let cell2 = row.insertCell(1);
             cell1.textContent = key;
             cell2.textContent = value;
+
+        const success = data.success;
+        const timestamp = data.timestamp;
+        const base = data.base;
+        const date = data.date;
+        document.getElementById('output').innerHTML = `<strong>Results: </strong> <br> Success: ${success} <br> Timestamp: ${timestamp} <br> Base: ${base} <br> Date: ${date}`;
         }
         })
-}
+    }
 
 function displayTable(){
     fetch(symbols_url)
@@ -111,6 +94,37 @@ function displayRate(){
             let cell2 = row.insertCell(1);
             cell1.textContent = key;
             cell2.textContent = value;
+        
+        const success = data.success;
+        const timestamp = data.timestamp;
+        const base = data.base;
+        const date = data.date;
+        document.getElementById('output').innerHTML = `<strong>Results: </strong> <br> Success: ${success} <br> Timestamp: ${timestamp} <br> Base: ${base} <br> Date: ${date}`;
+        }
+        })
+    }
+
+function historicalRate(){
+    var date = document.getElementById('date').value;
+    var url = 'http://data.fixer.io/api/'+date+'?access_key=91b8b58aa17e185bec0821d38d28785f'
+    fetch(url)
+    .then((res) => res.json())
+    .then(function (data) {
+        const rates = data.rates;
+        var table = document.getElementById('historical-table');
+        var tbody = document.getElementById('historical-result');
+        for (const [key, value] of Object.entries(rates)) {
+            let row = tbody.insertRow(-1);
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+            cell1.textContent = key;
+            cell2.textContent = value;
+        
+        const success = data.success;
+        const timestamp = data.timestamp;
+        const base = data.base;
+        const date = data.date;
+        document.getElementById('output').innerHTML = `<strong>Results: </strong> <br> Success: ${success} <br> Timestamp: ${timestamp} <br> Base: ${base} <br> Date: ${date}`;
         }
         })
     }
