@@ -21,6 +21,16 @@ Allows users to see the full names of the currency codes in the form of a table.
 I also added a feature whereby users can see the results of the that was request sent.('<strong>Results: </strong> <br> Success: ${success} <br> Timestamp: ${timestamp} <br> Base: ${base} <br> Date: ${date})
 
 ### Existing Features
+Historical Rates
+Allows users to check past currency rates all the way back to the year in 1999.
+
+Filtering results
+Allows users to select a currency code from the dropdown menu and get the results displayed in the form of a table.
+
+Full currency code names
+Allows users to see the full names of the currency codes in the form of a table.
+
+I also added a feature whereby users can see the results of the that was request sent.('<strong>Results: </strong> <br> Success: ${success} <br> Timestamp: ${timestamp} <br> Base: ${base} <br> Date: ${date})
 
 ### Features Left to Implement
 
@@ -47,6 +57,7 @@ https://tutorialdeep.com/knowhow/get-text-of-selected-dropdown/
 ### Content
 
 ### Media
+Photo from home page was done by Beak Wei Xiang in Adobe Illustrator.
 
 ### Acknowledgements
 It was just a thought I had when I was trying to start.
