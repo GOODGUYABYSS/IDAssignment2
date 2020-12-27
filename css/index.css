@@ -1,0 +1,38 @@
+h1 {
+    text-align: center;
+}
+
+#intro {
+    text-align: center;
+}
+
+.table-responsive {
+    text-align: center;
+}
+
+#contactus {
+    text-align: center;
+}
+
+.flex-container1 {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0%;
+}
+
+/* setting the flex items so that they will be side by side */
+.flex-item1 {
+    flex-basis: 46%;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+/* setting max width for the images */
+.flex-item1 img {
+    max-width: 100%;
+}
