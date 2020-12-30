@@ -1,6 +1,6 @@
-var main_url = 'http://data.fixer.io/api/latest?access_key=91b8b58aa17e185bec0821d38d28785f'
-var symbols_url = 'http://data.fixer.io/api/symbols?access_key=91b8b58aa17e185bec0821d38d28785f'
-var filter_url = 'http://data.fixer.io/api/latest?access_key=91b8b58aa17e185bec0821d38d28785f&symbols='
+var main_url = 'https://cors-anywhere.herokuapp.com/http://data.fixer.io/api/latest?access_key=91b8b58aa17e185bec0821d38d28785f'
+var symbols_url = 'https://cors-anywhere.herokuapp.com/http://data.fixer.io/api/symbols?access_key=91b8b58aa17e185bec0821d38d28785f'
+var filter_url = 'https://cors-anywhere.herokuapp.com/http://data.fixer.io/api/latest?access_key=91b8b58aa17e185bec0821d38d28785f&symbols='
 
 // setting default option for filterResults
 var myselectedRate = 'AED';
@@ -106,7 +106,7 @@ function displayRate(){
 
 function historicalRate(){
     var date = document.getElementById('date').value;
-    var url = 'http://data.fixer.io/api/'+date+'?access_key=91b8b58aa17e185bec0821d38d28785f'
+    var url = 'https://cors-anywhere.herokuapp.com/http://data.fixer.io/api/'+date+'?access_key=91b8b58aa17e185bec0821d38d28785f'
     fetch(url)
     .then((res) => res.json())
     .then(function (data) {
