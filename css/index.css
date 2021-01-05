@@ -1,3 +1,25 @@
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+.bkground-img {
+    background-image: url('../images/background-image3.jpg');
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bkground-color-p1 {
+    background-color: #89cff0;
+}
+
+.bkground-color-p2 {
+    background-color: #dcd0ff;
+}
+
 h1 {
     text-align: center;
 }
@@ -10,7 +32,7 @@ h1 {
     text-align: center;
 }
 
-#contactus {
+#socials {
     text-align: center;
 }
 
