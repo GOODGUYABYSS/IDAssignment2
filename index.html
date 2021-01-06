@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currency Exchange Rate Checker</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-        <a class="navbar-brand" href="#intro-section">Abyss Maker</a>
+        <a class="navbar-brand" href="#">Abyss Maker</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -40,50 +43,52 @@
             </li>
     </nav>
 
-    <div class="bkground-img" id="intro-section">
+    <div class="bkground-img">
+      <div class="intro-caption">
         <h1>Abyss Maker</h1>
-            <p id="intro">Welcome to Abyss Maker, a real-time currency exchange rate checker to provide you with fast and accurate results.</p>
-        
-        <div class="flex-container1">
-          <div class="flex-item1">
-            <h2>Background History</h2>
-            <p>Abyss Maker was made in December 2020, by Beak Wei Xiang, a student in Immersive Media of Ngee Ann Polytechnic. He made this website for his Assignment 2 of Interactive Development course during his studies. He made use of the free API provided by fixer.io to make this website possible. Currently, this website is still running. He hopes that users of this website would find it useful and make things more convenient for them. Enjoy!</p>
-          </div>
-
-          <div class="flex-item1">
-            <img src="images/logo.png" alt="logo" height="200px" width="300px">
-          </div>
-          
-        </div>
-      <br>
+        <h3>Welcome to Abyss Maker, a real-time currency exchange rate checker to provide you with fast and accurate results.</h3>
+        <button type="button" class="btn btn-outline-light btn-lg">BACKGROUND HISTORY</button>
+        <button type="button" class="btn btn-outline-light btn-lg">GET STARTED</button>
+      </div>
     </div>
 
-    <div class="bkground-color-p1 text-center">
-      <div>
-        <h3>Latest Currency Rate Table</h3>
-          <p>Here, you can see the latest currency rates displayed in the form of a table.</p>
-  
-          <button id="display-rate">Display Rate</button>
+    <div class="flex-container1">
+      <div class="flex-item1">
+        <h2>Background History</h2>
+        <p>Abyss Maker was made in December 2020, by Beak Wei Xiang, a student in Immersive Media of Ngee Ann Polytechnic. He made this website for his Assignment 2 of Interactive Development course during his studies. He made use of the free API provided by fixer.io to make this website possible. Currently, this website is still running. He hopes that users of this website would find it useful and make things more convenient for them. Enjoy!</p>
       </div>
-  
-      
+
+      <div class="flex-item1">
+        <img src="images/logo.png" alt="logo" height="200px" width="300px">
+      </div>
+    </div>
+
+    <div class="feature1 text-center">
+      <div class="feature-intro1">
+        <h3>Latest Currency Rate Table</h3>
+        <hr>
+        <p>Here, you can see the latest currency rates displayed in the form of a table.</p>
+        <button type="button" class="btn btn-dark btn-lg" id="display-rate">Display Rate</button>
+        <br>
+      </div>
   
       <div id="output"></div>
       
       <div class="table-responsive">
         <table id="rate-table" class="table table-striped table-bordered">
-          <tr class="table-success">
+          <tr class="table-primary">
             <th>Currency Code</th>
             <th>Currency Rate</th>
           </tr>
     
-          <tbody class="bkground-color-p2" id="rate-result">
+          <tbody id="rate-result">
     
           </tbody>
         </table>
-        <br>
       </div>
     </div>
+    
+    <hr class="my-4">
 
     <!-- contact me section -->
     <div class="container-fluid padding">
@@ -98,9 +103,7 @@
           <a href="#"><i class="fab fa-instagram"></i></a>
           <a href="#"><i class="fab fa-youtube"></i></a>
         </div>
-
       </div>
-      
     </div>
 
     <footer>
@@ -117,7 +120,7 @@
         
           <div class="col-md-4">
             <hr class="light">
-            <h5>Customer Service Hotlines</h5>
+            <h5>24-Hrs Customer Service Hotlines</h5>
             <hr class="light">
             <p>Monday-Friday: +65 97351202</p>
             <p>Saturday-Sunday: +65 90283512</p>
@@ -140,19 +143,6 @@
         </div>
       </div>
     </footer>
-
-    <div class="bg-dark text-light container-fluid border border-primary">
-      <footer id="socials">
-        <h2>Socials</h2>
-            <p class="opensans">Email: 
-                <br>
-                <br>Youtube: www.youtube.com/AbyssMaker
-                <br>Facebook: www.facebook.com/AbyssMaker
-                <br>Instagram: www.instagram.com/AbyssMaker
-                <br>Twitter: www.twitter.com/AbyssMaker
-            </p>
-      </footer>
-    </div>
   
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
