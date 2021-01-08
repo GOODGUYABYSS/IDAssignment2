@@ -8,7 +8,6 @@ var myselectedRate = 'AED';
 $(document).ready(function(){
     $('.type').change(function(){
         myselectedRate = $(this).find("option:selected").text();
-        console.log(myselectedRate);
     })
 })
 
@@ -22,9 +21,9 @@ function optionBox(){
     .then((res) => res.json())
     .then(function (data) {
         const rates = data.rates;
-        Object.entries(rates).forEach(([key, value]) => {
-            console.log(key, value);
-         });
+        // Object.entries(rates).forEach(([key, value]) => {
+        //     console.log(key, value);
+        //  });
         
         //  keys for the dropdown menu
         var selectBox, option, prop;
