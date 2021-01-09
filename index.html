@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+  <!-- nav bar for home page -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
       <a class="navbar-brand" href="#top">Abyss Maker</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,6 +31,7 @@
               Features
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="index.html">Latest Currency Rates</a>
               <a class="dropdown-item" href="displayCurrency.html">Currency Code</a>
               <a class="dropdown-item" href="filterResults.html">Filter Results</a>
               <a class="dropdown-item" href="historicalRates.html">Historical Rate</a>
@@ -38,6 +40,7 @@
       </div>
   </nav>
 
+  <!-- introduction for the website -->
   <div class="bkground-img">
     <div class="intro-caption">
       <h1>Abyss Maker</h1>
@@ -47,28 +50,37 @@
     </div>
   </div>
 
+  <!-- flex container to keep background history and image in place -->
   <div class="flex-container1" id="bgh">
+    <!-- background history -->
     <div class="flex-item1">
       <h2>Background History</h2>
       <p>Abyss Maker was made in December 2020, by Beak Wei Xiang, a student in Immersive Media of Ngee Ann Polytechnic. He made this website for his Assignment 2 of Interactive Development course during his studies. He made use of the free API provided by fixer.io to make this website possible. Currently, this website is still running. He hopes that users of this website would find it useful and make things more convenient for them. Enjoy!</p>
     </div>
 
+    <!-- image -->
     <div class="flex-item1">
+      <br>
+      <br>
       <img src="images/logo.png" alt="logo" height="200px" width="300px">
+      <br>
+      <br>
     </div>
   </div>
 
+  <!-- 1st feature, latest currency rate table -->
   <div class="feature1 text-center" id="feature1">
     <div class="feature-intro1">
-      <h3>Latest Currency Rate Table</h3>
+      <h1>Latest Currency Rate</h1>
       <hr>
       <p>Click on the 'Display Rate' button below to see the latest currency rates.</p>
       <button type="button" class="btn btn-dark btn-lg" id="display-rate">Display Rate</button>
-      <br>
     </div>
 
+    <!-- output is the result of the fetch, including success/failure of fetch, date, timestamp, and base currency -->
     <div id="output"></div>
     
+    <!-- table to display the final results -->
     <div class="table-responsive">
       <table id="rate-table" class="table table-striped table-bordered">
         <tr class="table-primary">
@@ -90,6 +102,8 @@
         <h2>Socials</h2>
         <hr>
       </div>
+
+      <!-- made use of fontawesome for the social media icons -->
       <div class="col-12 social padding">
         <a href="http://www.facebook.com/AbyssMakerCC" target="_blank"><i class="fab fa-facebook"></i></a>
         <a href="https://twitter.com/AbyssMakerCC" target="_blank"><i class="fab fa-twitter"></i></a>
@@ -99,6 +113,7 @@
     </div>
   </div>
 
+  <!-- footer for home page, including phone numbers, address and team members -->
   <footer>
     <div class="container-fluid padding">
       <div class="row text-center">
@@ -131,16 +146,18 @@
 
         <div class="col-12">
           <hr class="light">
-          <h5>&copy; abyssmaker.com</h5>
+          <h5>&copy; abyssmakercc.com</h5>
         </div>
       </div>
     </div>
   </footer>
 
+  <!-- scripts used that made this website possible -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
   <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   <script src="javascript/exchange.js"></script>
+  
 </body>
 </html>
