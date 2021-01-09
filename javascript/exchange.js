@@ -104,6 +104,7 @@ function displayRate(){
     }
 
 function historicalRate(){
+    $("#historical-result").empty(); 
     var date = document.getElementById('date').value;
     var url = 'https://cors-anywhere.herokuapp.com/http://data.fixer.io/api/'+date+'?access_key=91b8b58aa17e185bec0821d38d28785f'
     fetch(url)
