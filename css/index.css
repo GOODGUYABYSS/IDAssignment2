@@ -1,3 +1,4 @@
+/* setting the height and width to 100% so that hero image can be placed properly */
 body, html {
     height: 100%;
     width: 100%;
@@ -5,18 +6,22 @@ body, html {
     font-family: 'Poppins', sans-serif;
 }
 
+/* makes the nav bar bigger vertically so it looks more spaced out and easier to see */
 .navbar {
     padding: .8rem;
 }
 
+/* added some padding to the nav bar so it looks more spaced out and less cramped up */
 .navbar-nav li {
     padding-right: 15px;
 }
 
+/* changing the font size of the nav items so that the text are easier to see */
 .nav-link {
     font-size: 1.1em;
 }
 
+/* positioning the caption so that it can be in the middle of the hero image */
 .intro-caption {
     text-align: center;
     position: absolute;
@@ -25,12 +30,14 @@ body, html {
     transform: translate(-50%, -50%);
 }
 
+/* changing the font size of the brand name so that it looks bigger and attracts more attention */
 .intro-caption h1 {
     font-size: 500%;
     text-transform: uppercase;
     text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
 }
 
+/* changing the font size of the short description of the website and brand name so that it can still attract attention but not as much as the brand name */
 .intro-caption h3 {
     font-size: 200%;
     font-weight: 500;
@@ -38,61 +45,74 @@ body, html {
     padding-bottom: 1rem;
 }
 
+/* changing the design of the buttons on the home page */
 .btn-outline-light {
     border: 3px solid white;
 }
 
+/* changing the length and thickness of thematic break */
 .feature1 hr {
     width: 27%;
     border-top: 2px solid #b4b4b4;
 }
 
+/* changing the length and thickness of thematic break */
 .feature2 hr {
     width: 37%;
     border-top: 2px solid #b4b4b4;
 }
 
+/* changing the length and thickness of thematic break */
 .feature3 hr {
     width: 17%;
     border-top: 2px solid #b4b4b4;
 }
 
+/* changing the length and thickness of thematic break */
 .feature4 hr {
     width: 30%;
     border-top: 2px solid #b4b4b4;
 }
 
+/* added some padding to the top and bottom of the section to make it more spaced out */
 .feature-intro1 {
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
+/* changing the length and thickness of thematic break */
 .socials hr {
     width: 47%;
     border-top: 2px solid #b4b4b4;
 }
 
+/* changing the size and spacing of the social media icons */
 .social a {
     font-size: 3.5em;
     padding: 3rem;
 }
 
+/* adding colours so that the social media icons look like the original */
 .fa-facebook {
     color: #3b5998;
 }
 
+/* adding colours so that the social media icons look like the original */
 .fa-twitter {
     color: #00aced;
 }
 
+/* adding colours so that the social media icons look like the original */
 .fa-instagram {
     color: #517fa4;
 }
 
+/* adding colours so that the social media icons look like the original */
 .fa-youtube {
     color: #bb0000;
 }
 
+/* changing the colour when hovering over the social media icons to make it more interactive and aesthetic */
 .fa-facebook:hover,
 .fa-twitter:hover,
 .fa-instagram:hover,
@@ -100,6 +120,7 @@ body, html {
     color: #d5d5d5;
 }
 
+/* hero image for home page */
 .bkground-img {
     background-image: url('../images/background-image3.jpg');
     height: 100%;
@@ -110,10 +131,12 @@ body, html {
     position: relative;
 }
 
+/* changing the alignment so that results would be aligned to the center of their respective boxes */
 .table-responsive {
     text-align: center;
 }
 
+/* keeping the flex items in the flex container */
 .flex-container1 {
     background-color: lightgray;
     display: flex;
@@ -138,16 +161,19 @@ body, html {
     max-width: 100%;
 }
 
+/* changing the theme of the footer section, giving it colour, font colour and padding to make it more spaced out */
 footer {
     background-color: #3f3f3f;
     color: #d5d5d5;
     padding-top: 2rem;
 }
 
+/* changing the thickness of the thematic break below the footer section */
 hr.light {
     border-top: 1px solid #d5d5d5;
 }
 
+/* changing the content so that they will fit in mobile view */
 @media (max-width: 992px) {
     .social a {
         font-size: 4em;
