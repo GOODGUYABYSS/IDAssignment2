@@ -5,26 +5,25 @@ var filter_url = 'https://cors-anywhere.herokuapp.com/http://data.fixer.io/api/l
 // setting default option for filterResults
 var myselectedRate = 'AED';
 
+// filter results feature
 $(document).ready(function(){
     $('.type').change(function(){
         myselectedRate = $(this).find("option:selected").text();
     })
 })
 
+// functions that runs after the button is clicked, and setting some buttons so that they can only clicked once
 $('#selectRate').on("click", filterResults)
 $('#display-table').one("click", displayTable)
 $('#display-rate').one("click", displayRate)
 $('#historical-rate').on("click", historicalRate)
 
+// this function load upon the opening of filterResults.html so that the options would be ready once the webpage loads
 function optionBox(){
     fetch(main_url)
     .then((res) => res.json())
     .then(function (data) {
         const rates = data.rates;
-        // Object.entries(rates).forEach(([key, value]) => {
-        //     console.log(key, value);
-        //  });
-        
         //  keys for the dropdown menu
         var selectBox, option, prop;
 
@@ -39,7 +38,7 @@ function optionBox(){
     })
 }
 
-
+// this function takes the option selected by the user, and sends a request to the API, and return only one result (feature by fixer.io API)
 function filterResults(){
     fetch(filter_url+myselectedRate)
     .then((res) => res.json())
@@ -63,6 +62,7 @@ function filterResults(){
         })
     }
 
+// this function sends a request to the API, and return the results (feature by fixer.io API)
 function displayTable(){
     fetch(symbols_url)
     .then((res) => res.json())
@@ -80,6 +80,7 @@ function displayTable(){
         })
     }
 
+// this function sends a request to the API, and return the results (main feature by fixer.io API)
 function displayRate(){
     fetch(main_url)
     .then((res) => res.json())
@@ -103,6 +104,7 @@ function displayRate(){
         })
     }
 
+// this function requires the user to input a date, sends a request to the API, and return the results (feature by fixer.io API) 
 function historicalRate(){
     $("#historical-result").empty(); 
     var date = document.getElementById('date').value;
