@@ -86,3 +86,8 @@ https://images.pexels.com/photos/1037995/pexels-photo-1037995.jpeg?auto=compress
 
 ### Acknowledgements
 It was just a thought I had when I was trying to start.
+
+## Website Link
+https://weixiangbeak.github.io/IDAssignment2/
+
+https://github.com/weixiangbeak/IDAssignment2
